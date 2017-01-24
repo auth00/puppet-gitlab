@@ -352,3 +352,21 @@ registry_nginx['<%= k -%>'] = <%= decorate(@_real_registry_nginx[k]) %>
 <%- @manage_accounts.keys.sort.each do |k| -%>
 manage_accounts['<%= k -%>'] = <%= decorate(@manage_accounts[k]) %>
 <%- end end -%>
+<%- if @prometheus -%>
+
+##############
+# Prometheus #
+##############
+
+<%- @prometheus.keys.sort.each do |k| -%>
+prometheus['<%= k -%>'] = <%= decorate(@prometheus[k]) %>
+<%- end end -%>
+<%- if @node_exporter -%>
+
+#################
+# Node Exporter #
+#################
+
+<%- @node_exporter.keys.sort.each do |k| -%>
+node_exporter['<%= k -%>'] = <%= decorate(@node_exporter[k]) %>
+<%- end end -%>

@@ -51,6 +51,8 @@ class gitlab::config {
   $gitlab_workhorse = $::gitlab::gitlab_workhorse
   $user = $::gitlab::user
   $web_server = $::gitlab::web_server
+  $prometheus = $::gitlab::prometheus
+  $node_exporter = $::gitlab::node_exporter
 
   # replicate $nginx to $ci_nginx if $ci_nginx_eq_nginx true
   if $ci_nginx_eq_nginx {

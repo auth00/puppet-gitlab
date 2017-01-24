@@ -247,6 +247,14 @@
 #   Default: undef
 #   Hash of 'high_availability' config parameters.
 #
+# [*prometheus*]
+#   Default: undef
+#   Hash of 'prometheus' config parameters.
+#
+# [*node_exporter*]
+#   Default: undef
+#   Hash of 'node_exporter' config parameters.
+#
 # === Examples
 #
 #  class { 'gitlab':
@@ -332,6 +340,8 @@ class gitlab (
   $gitlab_workhorse = undef,
   $user = undef,
   $web_server = undef,
+  $prometheus = undef,
+  $node_exporter = undef,
   $custom_hooks = {},
 ) inherits ::gitlab::params {
 

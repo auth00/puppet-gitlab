@@ -394,6 +394,8 @@ class gitlab (
   if $unicorn { validate_hash($unicorn) }
   if $user { validate_hash($user) }
   if $web_server { validate_hash($web_server) }
+  if $prometheus { validate_hash($prometheus) }
+  if $node_exporter { validate_hash($node_exporter) }
   if $high_availability { validate_hash($high_availability) }
   if $manage_accounts { validate_hash($manage_accounts) }
   validate_hash($custom_hooks)
